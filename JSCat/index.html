@@ -1,0 +1,31 @@
+<html>
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>围住神经猫</title>
+  </head>
+  <body style="text-align: center">
+  	 <div style="display: inline-block; width: 480px; height: 800px; margin-left: auto; margin-right: auto; background: black;" id="gameDiv">
+        <canvas id="gameArea" width="480" height="800" style="width: 480px; height: 800px; background-color: rgb(0, 0, 0);"></canvas>
+    </div>
+    
+    <script type="text/javascript" >
+    var drawing = document.getElementById("gameArea");
+    var context = drawing.getContext("2d");
+    // 创建地图的二维数组
+    var MapArray = new Array(9);
+    for (var index = 0; index < MapArray.length; index++) {
+    	MapArray[index] = new Array(9);
+      for (var i = 0; i < 9; i++) {
+        MapArray[index][i] = 0;
+      }
+    }
+    var current = {
+      x : 4,
+      y : 4
+    };
+    </script>
+    <script type="text/javascript" src="./resource.js"></script>
+    <script type="text/javascript" src="./UI.js"></script>
+    <script type="text/javascript" src="./GameEngine.js"></script>
+  </body>
+</html>
